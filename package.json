@@ -1,0 +1,24 @@
+{
+  "name": "applicationgestioncontacts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "tailwindcss -i ./assets/styles/tailwindcss.css -o ./assets/styles/style.css --watch",
+    "build": "tailwindcss -i ./assets/styles/tailwindcss.css -o ./assets/styles/style.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souayrioss/ApplicationGestionContacts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/souayrioss/ApplicationGestionContacts/issues"
+  },
+  "homepage": "https://github.com/souayrioss/ApplicationGestionContacts#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.23"
+  }
+}

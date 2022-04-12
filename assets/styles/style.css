@@ -517,6 +517,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1rem;
 }
 
+.mt-24 {
+  margin-top: 6rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -638,12 +642,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(34 211 238 / 0));
 }
 
+.from-blue-800 {
+  --tw-gradient-from: #1e40af;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(30 64 175 / 0));
+}
+
 .via-sky-600 {
   --tw-gradient-stops: var(--tw-gradient-from), #0284c7, var(--tw-gradient-to, rgb(2 132 199 / 0));
 }
 
 .to-blue-800 {
   --tw-gradient-to: #1e40af;
+}
+
+.to-cyan-400 {
+  --tw-gradient-to: #22d3ee;
 }
 
 .bg-cover {
@@ -795,6 +808,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-sky-500 {
   --tw-text-opacity: 1;
   color: rgb(14 165 233 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .shadow-inner {

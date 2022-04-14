@@ -3,8 +3,8 @@ const log = document.getElementById("log");
 const signUp = document.getElementById("signUp");
 const formInput = document.querySelectorAll(".form_input");
 const para = document.createElement("p");
-const  usernameRegex = /^[a-zA-Z0-9]{6,20}$/
-const  emailRegex = /^[a-zA-Z0-9._-]+[@]+[\w]+[.]+(com|ma|org|io|fr|uk)$/
+const  usernameRegex = /^[a-zA-Z0-9]{6,20}$/;
+const  emailRegex = /^[a-zA-Z0-9._-]+[@]+[\w]+[.]+(com|ma|org|io|fr|uk)$/;
 const passwordRegex = /^[0-9a-zA-Z_@!/*$-]{8,}$/;
 const nameRegex = /^[a-z]{2,20}$/i;
 const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
@@ -13,7 +13,8 @@ const modelAdd =document.getElementById("modelAdd");
 const closeModelAdd = document.getElementById("closeModelAdd");
 const addContact = document.getElementById("addContact");
 const addContactForm = document.getElementById("addContactForm");
-const inputAddContact = addContactForm.querySelectorAll("input")
+const inputAddContact = addContactForm.querySelectorAll("input");
+
 if(log){
     log.addEventListener('click' , function(event){
         if(!usernameRegex.test(input[0].value)){
@@ -25,27 +26,27 @@ if(log){
                 para.classList.add("text-red-500");
                 
         }else if(!passwordRegex.test(input[1].value)){
-                event.preventDefault()
+                event.preventDefault();
                 input[1].classList.add("border-red-500");
                 input[1].focus();
                 formInput[1].appendChild(para);
-                para.textContent = "the password should contain numbers, letters and _ @ -.";
+                para.textContent = "the password should contain numbers, letters and _ @ - .";
                 para.classList.add("text-red-500");
         }
     })
 }
-    if(signUp){
-        signUp.addEventListener('click' , function(event){
-            if(!usernameRegex.test(input[0].value)){
-                event.preventDefault()
-                    input[0].classList.add("border-red-500");
-                    input[0].focus();
-                    formInput[0].appendChild(para);
-                    para.textContent = "The usename should contain only numbers and letters.";
-                    para.classList.add("text-red-500");
-                    
+
+if(signUp){
+    signUp.addEventListener('click' , function(event){
+        if(!usernameRegex.test(input[0].value)){
+            event.preventDefault();
+                input[0].classList.add("border-red-500");
+                input[0].focus();
+                formInput[0].appendChild(para);
+                para.textContent = "The usename should contain only numbers and letters.";
+                para.classList.add("text-red-500");     
             }else if(!emailRegex.test(input[1].value)){
-                    event.preventDefault()
+                    event.preventDefault();
                     input[1].classList.add("border-red-500");
                     input[1].focus();
                     formInput[1].appendChild(para);

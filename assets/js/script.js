@@ -6,6 +6,19 @@ const para = document.createElement("p");
 const  usernameRegex = /^[a-zA-Z0-9]{6,20}$/
 const  emailRegex = /^[a-zA-Z0-9._-]+[@]+[\w]+[.]+(com|ma|org|io|fr|uk)$/
 const passwordRegex = /^[0-9a-zA-Z_@!/*$-]{8,}$/;
+const openModelAdd = document.getElementById("openModelAdd");
+const modelAdd =document.getElementById("modelAdd");
+const closeModelAdd = document.getElementById("closeModelAdd");
+console.log(openModelAdd)
+console.log(closeModelAdd)
+console.log(modelAdd)
+openModelAdd.onclick = function (){
+    modelAdd.classList.remove("hidden");
+}
+closeModelAdd.onclick = function (event){
+    event.preventDefault()
+    modelAdd.classList.add("hidden");
+}
 if(log){
     log.addEventListener('click' , function(event){
         if(!usernameRegex.test(input[0].value)){

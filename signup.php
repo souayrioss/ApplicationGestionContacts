@@ -21,7 +21,7 @@
                 <form class="" method="POST" >
                     <div class="form_input mb-2">
                         <label class="text-xl font-semibold" for="UserName">User Name</label>
-                        <input class="mt-1 p-2 border-solid border-2 rounded-md focus:shadow-none focus:border-sky-500 w-full"type="text"  name="UserName" id="UserName" placeholder="Entrer  UserName" value="" > 
+                        <input class="mt-1 p-2 border-solid border-2 rounded-md focus:shadow-none focus:border-sky-500 w-full"type="text"  name="userName" id="UserName" placeholder="Entrer  UserName" value="" > 
                     </div>
                     <div class="form_input mb-2">
                         <label class="text-xl font-semibold" for="email">E-mail</label>
@@ -38,7 +38,7 @@
                     <div class="mb-4">
                         <input id="signUp" class="inline-block text-lg font-bold py-4 leading-none border rounded-lg bg-sky-400 text-white border-white hover:border-sky-400 hover:text-sky-500 hover:bg-white mr-10 mt-4 lg:mt-0 w-full" type="submit" value="Sign up" >
                     </div>
-                    <p class="text-lg text-center font-semibold">Déja un compte!!!  <a class="text-sky-500 font-bold" href="login.html"> login</a></p>
+                    <p class="text-lg text-center font-semibold">Déja un compte!!!  <a class="text-sky-500 font-bold" href="login.php"> login</a></p>
                 </form>
             </article>
     </main>

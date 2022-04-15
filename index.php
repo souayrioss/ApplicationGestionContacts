@@ -13,15 +13,15 @@
             <span class="text-2xl tracking-tight font-black">Contact List</span>
         </div>
         <div>
-            <a href="login.html" class="inline-block text-base font-bold px-6 py-3 leading-none border rounded-lg bg-blue-400 text-white border-white hover:border-blue-400 hover:text-blue-500 hover:bg-white mr-10 mt-4 lg:mt-0">Sign In</a>
+            <a href="login.php" class="inline-block text-base font-bold px-6 py-3 leading-none border rounded-lg bg-blue-400 text-white border-white hover:border-blue-400 hover:text-blue-500 hover:bg-white mr-10 mt-4 lg:mt-0">Sign In</a>
         </div>
     </nav>
     <main>
         <div class="bg-cover bg-center px-16 py-48" style="background-image: url(assets/img/image-bg.jpg)">
             <h1 class="text-6xl text-white font-bold text-center ">Vos Contacts, sont le moteur de votre réussite !</h1></br>
             <p class=" text-3xl text-white  text-center ">Ajouter facilement des contacts, organisez-les sans effort. Mettez leurs données à jour, visualisez les actions quotidiennes à réaliser par les commerciaux.</p>
-            <p class=" text-xl text-white  text-center "><a class="text-black font-semibold" href="signup.html">sign up</a> pour creer voter contacts list.</p>
-            <p class=" text-xl text-white  text-center ">vous etes deja un compte!!<a class="text-black font-semibold" href="login.html"> login ici</a></p>
+            <p class=" text-xl text-white  text-center "><a class="text-black font-semibold" href="signup.php">sign up</a> pour creer voter contacts list.</p>
+            <p class=" text-xl text-white  text-center ">vous etes deja un compte!!<a class="text-black font-semibold" href="login.php"> login ici</a></p>
         </div>
         <article class="bg-gray-200 pb-10">
             <section class="p-16 " >
@@ -46,7 +46,7 @@
     </main>
     <footer class=" p-0 m-0">
         <div class="w-full bg-blue-400 py-3 mb-0 "></div>
-        <div class=" flex justify-center  my-10"><a href="index.html" class="text-3xl font-extrabold ">Contacts List</a></div>
+        <div class=" flex justify-center  my-10"><a href="index.php" class="text-3xl font-extrabold ">Contacts List</a></div>
         <div class=" flex  justify-around items-center mb-10">
             <div class=" text-center mr-2">
                 <h4 class=" text-blue-400 text-xl font-bold mb-3">Contacts utiles</h4>
@@ -58,10 +58,10 @@
             <div class=" ms-2 ">
                 <ul class=" list-unstyled ">
                     <li class="mb-2">
-                        <a class="text-xl text-gray-600 font-semibold underline decoration-2 hover:uppercase" href="login.html">Login</a>
+                        <a class="text-xl text-gray-600 font-semibold underline decoration-2 hover:uppercase" href="login.php">Login</a>
                     </li>
                     <li >
-                        <a class="text-xl text-gray-600 font-semibold underline decoration-2 hover:uppercase" href="signup.html">Sign up</a>
+                        <a class="text-xl text-gray-600 font-semibold underline decoration-2 hover:uppercase" href="signup.php">Sign up</a>
                     </li>
                 </ul>
             </div>

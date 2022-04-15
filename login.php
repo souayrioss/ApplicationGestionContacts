@@ -31,7 +31,7 @@
                     <div class="mb-4">
                         <button id="log" class="inline-block text-lg font-bold py-4 leading-none border rounded-lg bg-sky-400 text-white border-white hover:border-sky-400 hover:text-sky-500 hover:bg-white mr-10 mt-4 lg:mt-0 w-full" type="submit">Sign in</button>
                     </div>
-                    <p class="text-lg text-center font-semibold">Créer un compte pour accéder <a class="text-sky-500 font-bold" href="signup.html"> Sing up</a></p>
+                    <p class="text-lg text-center font-semibold">Créer un compte pour accéder <a class="text-sky-500 font-bold" href="signup.php"> Sing up</a></p>
                 </form>
             </article>
     </main>

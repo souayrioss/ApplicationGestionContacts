@@ -15,10 +15,10 @@
         <div  >
             <ul class="flex  items-center ">
                 <li class="mr-3">
-                    <a href="contact.html" class=" text-white text-lg font-semibold">Home</a>
+                    <a href="contact.php" class=" text-white text-lg font-semibold">Home</a>
                 </li>
                 <li>
-                    <a href="profil.html" class="flex mr-3 text-sm rounded-full ">
+                    <a href="profil.php" class="flex mr-3 text-sm rounded-full ">
                         <span class="sr-only">Open user menu</span>
                         <img class="w-10 h-10 rounded-full" src="assets/img/avatar.png" alt="user photo">
                     </a>
@@ -26,7 +26,7 @@
             </ul>
         </div>
         <div>
-            <a href="login.html" class="inline-block text-base font-bold px-6 py-3 leading-none border rounded-lg border-blue-400 text-blue-500 bg-white hover:bg-blue-400 hover:text-white hover:border-white  mr-10 mt-4 lg:mt-0">Log out</a>
+            <a href="login.php" class="inline-block text-base font-bold px-6 py-3 leading-none border rounded-lg border-blue-400 text-blue-500 bg-white hover:bg-blue-400 hover:text-white hover:border-white  mr-10 mt-4 lg:mt-0">Log out</a>
         </div>
     </nav>
     <main>

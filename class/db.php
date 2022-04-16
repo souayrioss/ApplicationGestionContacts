@@ -11,10 +11,9 @@ class Db {
         try {
             $dsn = 'mysql:host='. $this->host . ';dbname=' .$this->dbName . ';port='. $this->port;
             $db = new PDO($dsn,$this->user,$this->password);
-            echo "okay";
             return $db;
         } catch (Exception $ex) {
-            echo "connection failed " . $ex->getMessage();
+            echo null;
         }
     }
 

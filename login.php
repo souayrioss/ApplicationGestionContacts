@@ -34,14 +34,14 @@
     <script src="assets/js/script.js">
     </script>
         <?php 
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){   
-        if(isset($_POST['login'])){
-            require_once('./class/users.php');
-            extract($_POST);
-            $user = new User('',$userName,$password);
-            $user->loginUser();
-        }
-    }
-?>
+            if($_SERVER['REQUEST_METHOD'] == 'POST'){   
+                if(isset($_POST['login'])){
+                    require_once('./class/users.php');
+                    extract($_POST);
+                    $user = new User('',$userName,$password);
+                    $user->loginUser();
+                }
+            }
+        ?>
 </body>
 </html>

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,13 +33,33 @@
         </div>
     </nav>
     <main>
-        <div class="flex  justify-between items-center  mt-5 mx-10">
+        <div class="flex  justify-between items-center  m-5 mx-10">
             <div > 
                 <h3 class="text-2xl font-bold ">Contact List</h3>
             </div>
             <div >
                 <button id="openModelAdd" type="button" class="inline-block text-base font-bold px-6 py-3 leading-none border rounded-lg bg-blue-500 text-white border-white hover:border-blue-700 hover:text-blue-500 hover:bg-white "  >ADD NEW CONTACT</button>
             </div>
+        </div>
+        <div class="flex justify-center items-center overflow-x-auto  sm:rounded-lg">
+        <table class="w-full overflow-x-auto shadow-xl text-gray-500  m-10">
+            <thead class="text-lg font-semibold text-gray-700 uppercase bg-gray-50 border">
+                <tr>
+                    <th scope="col" class="px-6 py-3 border" >Full Name</th>
+                    <th scope="col" class="px-6 py-3 border" >Email</th>
+                    <th scope="col" class="px-6 py-3 border" >Phone</th>
+                    <th scope="col" class="px-6 py-3 border" >Adresse</th>
+                    <th scope="col" colspan="2" class="px-6 py-3 border" ><span class="sr-only">Edit</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                    require_once('./class/contact.php');
+                    $contact = new Contact();
+                    $contact->getConatctsByIdUser($_SESSION['id']);
+                ?>
+            </tbody>
+        </table>
         </div>
         <div id="modelAdd" class="bg-gray-400/60  fixed top-0 left-0 w-full h-full  hidden" >
             <div class="flex  justify-center absolute top-44 left-1/3 bg-white  py-8 rounded-xl w-1/2 md:w-1/3">
@@ -65,9 +88,19 @@
                         <input type="text" class="mt-1 p-2 border-solid border-2 rounded-md outline-none w-full" name="address" id="address"  placeholder="Verifier password" value="">
                     </div>
                     <div class="mb-4 mt-4 lg:mt-0 ">
-                        <input id="addContact" class=" text-lg font-bold py-1 px-5 float-right border rounded-lg bg-sky-400 text-white border-white hover:border-sky-400 hover:text-sky-500 hover:bg-white  " type="submit" value="Sign up" >
+                        <input id="addContact" class=" text-lg font-bold py-1 px-5 float-right border rounded-lg bg-sky-400 text-white border-white hover:border-sky-400 hover:text-sky-500 hover:bg-white  " type="submit" value="Save" name="addContact">
                         <input id="closeModelAdd" class=" text-lg font-bold py-1 px-5 float-right border rounded-lg bg-gray-600 text-white border-white hover:border-gray-800 hover:text-gray-500 hover:bg-white mr-5 " type="submit" value="Close">
                     </div>
+                    <?php 
+                        if($_SERVER['REQUEST_METHOD'] == 'POST'){   
+                            if(isset($_POST['addContact'])){
+                                extract($_POST);
+                                $contact = new Contact();
+                                $contact->setInfoContacts($firstName,$lastName,$phone,$email,$address,$_SESSION['id']);
+                                $contact->addContact();
+                            }
+                        }
+                    ?>
                 </form>
             </div>
         </div>

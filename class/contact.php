@@ -10,58 +10,64 @@
         private $id_user ;
 
 
-        public function __construct( $firstName, $lastName,$phone ,$email, $address, $id_user)
+        public function setInfoContacts( $firstName, $lastName,$phone ,$email, $address,$id_user)
         {
             $this->firstName = $firstName ;
             $this->lastName = $lastName ;
             $this->phone = $phone ;
             $this->email = $email ;
             $this->address = $address ;
-            $this->id_user = $id_user ;
+            $this->id_user = $id_user;
         }
-        public function getUserByEmail(){
+        public function getInfoContacts( $firstName, $lastName,$phone ,$email, $address,$id_user)
+        {
+            return $this->firstName = $firstName ;
+            return $this->lastName = $lastName ;
+            return $this->phone = $phone ;
+            return $this->email = $email ;
+            return $this->address = $address ;
+            return $this->id_user = $id_user;
+        }
+
+        public function addContact(){
             $conn = $this->connect();
-            if($conn == null) echo 'no conn' ;
-            $sql = "SELECT * FROM users WHERE email = :email";
-            
+            $sql ="INSERT INTO contacts(firstName, lastName, phone, email,address,id_user ) VALUES (?,?,?,?,?,? )";
             $stm = $conn->prepare($sql);
             $stm->execute([
-                ':email'=> $this->email
+                $this->firstName,
+                $this->lastName,
+                $this->phone,
+                $this->email,
+                $this->address,
+                $this->id_user 
             ]);
-            $data = $stm->fetchAll(PDO::FETCH_ASSOC);
-            if(count($data) == 0)
-                return null;
-            else
-                print_r($data[0]);
+            header('location :contact.php');
         }
-        public function addUser(){
+        public function getConatctsByIdUser($id_user){
             $conn = $this->connect();
-            if($conn == null) echo 'connextion failed' ;
-            $sql ="INSERT INTO users(userName, email, password) VALUES (:userName, :email, :password)";
-            $stm = $conn->prepare($sql);
-            $stm->execute([
-                ':userName'=> $this->userName,
-                ':email'=> $this->email,
-                ':password'=> $this->password
-            ]);
-            $conn = null;
+            $stm = $conn->prepare("SELECT * FROM contacts WHERE id_user = :id");
+            $stm->bindParam(":id", $id_user, PDO::PARAM_STR);
+            $stm->execute(); 
+            $contacts = $stm->fetchAll();
+            foreach ($contacts as $contact) {
+                ?>
+                        <tr class="bg-white border-b ">
+                            <th scope="row" class="px-6 py-4 font-semibold text-gray-900 text-lg whitespace-nowrap border "><?= $contact['firstName'] . " " .$contact['lastName'] ?></th>
+                            <td class="px-6 py-4 border" ><?= $contact['email'] ?></td>
+                            <td class="px-6 py-4 border" ><?= $contact['phone'] ?></td>
+                            <td class="px-6 py-4 border" ><?= $contact['address'] ?></td>
+                            <td class="px-6 py-4 border " ><button class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="">Edit</button></td>
+                            <td class="px-6 py-4 border" ><a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="delete.php?id=<?= $contact['id']?>">Delete</a></td>
+                        </tr>
+                <?php
+            }
         }
-        public function getUserByEmailAndPassword(){
+        public function deleteContactById(){
             $conn = $this->connect();
-            if($conn == null) echo 'no conn' ;
-            $sql = "SELECT * FROM users WHERE email = :email and password = :password";
-            
-            $stm = $conn->prepare($sql);
-            $stm->execute([
-                ':email'=> $this->email,
-                ':password'=> $this->password
-            ]);
-            $data = $stm->fetchAll(PDO::FETCH_ASSOC);
-            if(count($data) == 0)
-                return null;
-            else
-                print_r($data[0]);
+            $stm = $conn->prepare("DELETE  FROM contacts WHERE id = :id");
+            $stm->bindParam(":id", $id, PDO::PARAM_STR);
+            $stm->execute(); 
         }
+        
     }
-$user1 = new User('souayri@rrrr','aaaaaaaa','azerty22@');
-$user1->addUser();
+

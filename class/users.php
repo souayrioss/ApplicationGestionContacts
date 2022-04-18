@@ -1,5 +1,5 @@
 <?php
-    session_start();
+
     require_once('db.php');
     class User extends Db{
         private $id;
@@ -60,9 +60,11 @@
             $data = $stm->fetch(PDO::FETCH_ASSOC);
             if($data)
             {
+                session_start();
                 $_SESSION['id'] = $data['id'];
                 $_SESSION['email'] = $data['email'];
                 $_SESSION['userName'] = $data['userName'];
+                $_SESSION['password'] = $data['password'];
                 $_SESSION['regDate'] = $data['create_at'];
                 $_SESSION['logDate'] = date("d/M/Y");
                 header('location: profil.php');
@@ -74,4 +76,6 @@
         }
                 
         }
+
+        
     }

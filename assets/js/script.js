@@ -90,7 +90,7 @@ if(addContact){
                     inputAddContact[0].focus();
                     formInput[0].appendChild(para);
                     para.textContent = "The first name should contain only letters.";
-                    para.classList += "text-red-500 text-sm";
+                    para.classList = "text-red-500 text-sm";
                     
             }else if(!nameRegex.test(inputAddContact[1].value)){
                     event.preventDefault()
@@ -99,7 +99,7 @@ if(addContact){
                     inputAddContact[1].focus();
                     formInput[1].appendChild(para);
                     para.textContent = "The last name should contain only letters.";
-                    para.classList += "text-red-500 text-sm";
+                    para.classList = "text-red-500 text-sm";
                 }else if(!phoneRegex.test(inputAddContact[2].value)){
                     event.preventDefault()
                     inputAddContact[1].classList.remove("border-red-500");
@@ -107,7 +107,7 @@ if(addContact){
                     inputAddContact[2].focus();
                     formInput[2].appendChild(para);
                     para.textContent = "The phone should be :0623456789 or +212612345678.";
-                    para.classList += "text-red-500 text-sm";
+                    para.classList = "text-red-500 text-sm";
                     }else if(!emailRegex.test(inputAddContact[3].value)){
                         event.preventDefault()
                         inputAddContact[2].classList.remove("border-red-500");
@@ -115,7 +115,7 @@ if(addContact){
                         inputAddContact[3].focus();
                         formInput[3].appendChild(para);
                         para.textContent = "The email should be : example@domane.com";
-                        ppara.classList += "text-red-500 text-sm";
+                        ppara.classList = "text-red-500 text-sm";
                     }
                     else if(inputAddContact[4].value.trim() === ""){
                         event.preventDefault()
@@ -124,7 +124,7 @@ if(addContact){
                         inputAddContact[4].focus();
                         formInput[4].appendChild(para);
                         para.textContent = "The address should not be empty ";
-                        para.classList += "text-red-500 text-sm";
+                        para.classList = "text-red-500 text-sm";
 
                     }
     })

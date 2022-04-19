@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,15 +38,15 @@
             <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
                 <blockquote>
                     <p class="text-2xl font-bold">
-                    Welcome “Jone Doe”
+                    Welcome “<?= $_SESSION['userName'] . $_SESSION['id'] ?>”
                     </p>
                 </blockquote>
                 <figcaption class="font-medium">
                     <p class="text-sky-500 text-lg font-bold mb-2">
-                    Sign Up date :: “<span class="text-gray-500 text-lg font-semibold ">dd/mm/yyyy</span>”
+                    Sign Up date :: “<span class="text-gray-500 text-lg font-semibold "><?= $_SESSION['regDate'] ?></span>”
                     </p>
                     <p class="text-sky-500 text-lg font-bold">
-                    Last login :: “ <span>dd/mm/yyyy</span>”
+                    Last login :: “ <span><?= $_SESSION['logDate'] ?></span>”
                     </p>
                 </figcaption>
                 </div>

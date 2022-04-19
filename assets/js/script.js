@@ -25,6 +25,7 @@ if(log){
     
         }else if(!passwordRegex.test(input[1].value)){
                 event.preventDefault();
+                input[0].classList.remove("border-red-500");
                 input[1].classList.add("border-red-500");
                 input[1].focus();
                 formInput[1].appendChild(para);
@@ -46,20 +47,23 @@ if(signUp){
                 para.classList += "text-red-500 text-sm";     
             }else if(!emailRegex.test(input[1].value)){
                     event.preventDefault();
+                    input[0].classList.remove("border-red-500");
                     input[1].classList.add("border-red-500");
                     input[1].focus();
                     formInput[1].appendChild(para);
                     para.textContent = "The email should be : example@domane.com";
                     para.classList += "text-red-500 text-sm";
                 }else if(!passwordRegex.test(input[2].value)){
-                    event.preventDefault()
+                    event.preventDefault();
+                    input[1].classList.remove("border-red-500");
                     input[2].classList.add("border-red-500");
                     input[2].focus();
                     formInput[2].appendChild(para);
                     para.textContent = "the password should contain numbers, letters and _ @ -.";
                     para.classList += "text-red-500 text-sm";
                     }else if(input[2].value.trim() !== input[3].value.trim()){
-                        event.preventDefault()
+                        event.preventDefault();
+                        input[2].classList.remove("border-red-500");
                         input[3].classList.add("border-red-500");
                         input[3].focus();
                         formInput[3].appendChild(para);

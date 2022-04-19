@@ -29,7 +29,7 @@ session_start();
             </ul>
         </div>
         <div>
-            <a href="login.php" class="inline-block text-base font-bold px-6 py-3 leading-none border rounded-lg border-blue-400 text-blue-500 bg-white hover:bg-blue-400 hover:text-white hover:border-white  mr-10 mt-4 lg:mt-0">Log out</a>
+            <a href="logout.php" class="inline-block text-base font-bold px-6 py-3 leading-none border rounded-lg border-blue-400 text-blue-500 bg-white hover:bg-blue-400 hover:text-white hover:border-white  mr-10 mt-4 lg:mt-0">Log out</a>
         </div>
     </nav>
     <main>

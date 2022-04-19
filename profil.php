@@ -29,13 +29,13 @@ session_start();
             </ul>
         </div>
         <div>
-            <a href="login.php" class="inline-block text-base font-bold px-6 py-3 leading-none border rounded-lg border-blue-400 text-blue-500 bg-white hover:bg-blue-400 hover:text-white hover:border-white  mr-10 mt-4 lg:mt-0">Log out</a>
+            <a href="logout.php" class="inline-block text-base font-bold px-6 py-3 leading-none border rounded-lg border-blue-400 text-blue-500 bg-white hover:bg-blue-400 hover:text-white hover:border-white  mr-10 mt-4 lg:mt-0">Log out</a>
         </div>
     </nav>
     <main>
-        <figure class="md:flex justify-start  p-8 md:p-0 mt-20">
-            <img class="w-24 h-24 md:w-48 md:h-auto  rounded-full mx-20" src="assets/img/avatar.png"" width="384" height="512">
-            <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+        <figure class="flex flex-col md:flex-row p-8 justify-between items-center bg-slate-200 mt-9 shadow-lg rounded-xl md:p-0 w-4/5 lg:w-1/2 mx-10" >
+            <img class="w-24 h-24 md:w-48 md:h-auto md:rounded-none  rounded-full " src="assets/img/avatar.png"" width="384" height="512">
+            <div class=" md:px-8 pl-10 text-center md:text-left xl:mr-32 space-y-4">
                 <blockquote>
                     <p class="text-2xl font-bold">
                     Welcome “<?= $_SESSION['userName'] . $_SESSION['id'] ?>”
